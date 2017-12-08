@@ -1,0 +1,20 @@
+
+
+Building and Running
+====================
+
+1.)  Make sure the ../../data directory has the input and output files.
+2.)  Load the Intel Compiler Suite 2017 (not tested with previous versions)
+3.)  Type 'make'
+4.)  Type 'make run' to run the original data set, or 'make run$' for $=1,2,3
+     to run the SKA data sets
+
+
+Environment Variables
+=====================
+
+1.)  OMP_NUM_THREADS: set to number of cores (i.e. disable hyper threading)
+     On KNL we set this to 136, but it will vary across KNLs since they don't
+     all have the same number of physical cores.  Experiment.
+2.)  Set KMP_AFFINITY=scatter
+3.)  Set KMP_BLOCKTIME=0
